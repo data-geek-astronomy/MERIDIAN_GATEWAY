@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "description": "SYNTHETIC DATA. Example employee prompts an analyst might paste into a public LLM chatbot. All names, account numbers, SSNs, and code snippets below are fabricated for this demo -- no real client, employee, or proprietary data is used."
+  },
+  "examples": [
+    {
+      "id": "EX-01",
+      "label": "Client PII in a summarization request",
+      "prompt": "Can you summarize this client note for me: John Whitfield (SSN 512-88-3049, DOB 04/12/1975) called about his account 4400-9981-2237 wanting to increase his wire transfer limit. His email is j.whitfield@fakemail.com and his phone is (212) 555-0199. He lives at 88 Elm Street, Apt 4B, New York, NY 10011."
+    },
+    {
+      "id": "EX-02",
+      "label": "Proprietary trading algorithm leak",
+      "prompt": "Here's our internal momentum strategy, can you optimize it for lower latency?\n\ndef alpha_signal_v3(prices, window=14):\n    momentum = prices.pct_change(window)\n    z = (momentum - momentum.rolling(60).mean()) / momentum.rolling(60).std()\n    signal = np.where(z > 1.8, 1, np.where(z < -1.8, -1, 0))\n    return signal * RISK_LIMIT_INTERNAL_TABLE['desk_7A']"
+    },
+    {
+      "id": "EX-03",
+      "label": "Financial data with account details",
+      "prompt": "Draft an email to the client explaining that account #8823-1145-0092 (routing 021000021) had a suspicious wire of $45,000 flagged, and that Maria Gonzalez (card ending 4471) should call us back."
+    },
+    {
+      "id": "EX-04",
+      "label": "Clean prompt, nothing sensitive",
+      "prompt": "Can you help me write a polite follow-up email to a client who hasn't responded in two weeks about scheduling a portfolio review?"
+    },
+    {
+      "id": "EX-05",
+      "label": "Internal system names + credentials-adjacent text",
+      "prompt": "I'm getting an error connecting to the RiskEngine-Prod cluster at 10.44.12.7 using service account svc_trading_batch, can you help debug this stack trace?"
+    }
+  ]
+}
