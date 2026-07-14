@@ -11,6 +11,8 @@ pinned: false
 
 # Meridian Gateway — Enterprise LLM DLP Proxy
 
+**[View the project landing page](docs/index.html)** (enable GitHub Pages on this repo to host it live — see below) &middot; **[Live interactive demo](https://huggingface.co/spaces/Darkweb007/MERIDIAN_GATEWAY)**
+
 **Portfolio project 2 of 5** — a demo response to the "Shadow AI" problem
 Wall Street firms like JPMorgan Chase, Citi, and Goldman Sachs have
 restricted or banned public LLM use over: employees pasting proprietary
@@ -113,3 +115,7 @@ llm-gateway-dlp/
 | `queue_sim.py` in-process queue | Apache Kafka producer/consumer, with dead-letter topics for failed masking |
 | SQLite in-memory vault | Encrypted, access-controlled KV store (Vault/KMS-backed), per-session TTL, full audit trail on every read |
 | Rule-based code-snippet flag | AST-aware static analysis + secrets scanning (e.g. detect-secrets, TruffleHog) layered on top |
+
+## Project landing page
+
+`docs/index.html` is a standalone, single-file static landing page (no build step) summarizing the project's results, method, and findings. To host it live on GitHub Pages: repo **Settings → Pages → Source: Deploy from a branch → Branch: main, folder: /docs → Save**. It'll be live within a minute or two at `https://data-geek-astronomy.github.io/MERIDIAN_GATEWAY/`.
