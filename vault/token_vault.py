@@ -7,6 +7,8 @@ Backed by SQLite (in-memory per process for this demo). In production this
 is a proper encrypted, access-controlled key-value store (e.g. a Vault/KMS-backed
 table) with per-session TTLs and audit logging on every read.
 """
+
+from __future__ import annotations
 import sqlite3
 import threading
 

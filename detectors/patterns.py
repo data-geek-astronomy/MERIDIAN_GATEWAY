@@ -10,6 +10,8 @@ spaCy/BERT NER model or a Kafka consumer stage would implement. Swap
 `RegexEntityDetector` for a real model without touching the gateway,
 masking, or vault logic.
 """
+
+from __future__ import annotations
 import re
 from dataclasses import dataclass
 

@@ -7,6 +7,8 @@ unmask(): external LLM's response (which may echo back some of those
           tokens) -> rehydrated response, tokens swapped back to real values
           for the authorized internal user only.
 """
+
+from __future__ import annotations
 from dataclasses import dataclass, field
 
 from detectors.patterns import detect, contains_proprietary_code, Entity

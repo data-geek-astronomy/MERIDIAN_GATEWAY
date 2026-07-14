@@ -22,6 +22,8 @@ cluster isn't needed to demonstrate the masking/unmasking contract.
         v
     response shown to employee (external LLM never saw the sensitive data)
 """
+
+from __future__ import annotations
 import os
 from dataclasses import dataclass, field
 
